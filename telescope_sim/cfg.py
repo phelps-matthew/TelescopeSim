@@ -164,6 +164,8 @@ class SimulateMultiAperatureConfig:
     # Time granularity of each simulation step (seconds)
     step_dt: float = 0.01
 
+# deserialize yaml/cli string to class, give Wrap object
+pyrallis.decode.register(List, lambda x: [FilterConfig(**x)])
 
 if __name__ == "__main__":
     """Create the simulator config, export to yaml"""

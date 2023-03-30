@@ -12,8 +12,8 @@ import hcipy
 import numpy as np
 import pyrallis
 from matplotlib import pyplot as plt
-from telescope_sim.multi_aperture_psf import MultiAperturePSFSampler
 from telescope_sim.cfg import SimulateMultiAperatureConfig
+from telescope_sim.multi_aperture_psf import MultiAperturePSFSampler
 
 
 class SimulateMultiApertureTelescope:
@@ -217,13 +217,15 @@ class SimulateMultiApertureTelescope:
             filter_configs: list of dicts of filter configs
         """
         filter_configs = []
-        for filter in self.cfg.filters:
+        for filter_cfg in self.cfg.filters:
+            # convert FilterConfig to dict
+            filter = pyrallis.encode(filter_cfg)
             config = {
-                "central_lam": filter.central_lambda,
-                "focal_extent": filter.focal_extent,
-                "focal_res": filter.focal_resolution,
-                "frac_bandwidth": filter.frac_bandwidth,
-                "num_samples": filter.bandwidth_samples,
+                "central_lam": filter["central_lambda"],
+                "focal_extent": filter["focal_extent"],
+                "focal_res": filter["focal_resolution"],
+                "frac_bandwidth": filter["frac_bandwidth"],
+                "num_samples": filter["bandwidth_samples"],
             }
             filter_configs.append(config)
         return filter_configs

@@ -1,19 +1,20 @@
 # TelescopeSim
 Utilize HCIPy to simulate telescope optics, atmosphere for novel distirbuted aperture designs and AO concepts
 
-# Install
+## Install
 ```bash
-# install dependencies
+# create virtual env and install dependencies
 conda create -n dasie python=3.10 pip
 pip install numpy matplotlib scipy hcipy
+pip install pyrallis
 
-# install telescope sim package
+# install telescope_sim package
 git clone https://github.com/phelps-matthew/TelescopeSim.git
 cd TelescopeSim
 pip install -e .
 ```
 
-# Usage
+## Usage
 ```bash
 # navigate to .../TelescopeSim/telescope_sim
 
