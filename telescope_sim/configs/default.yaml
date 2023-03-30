@@ -1,0 +1,41 @@
+add_ptt_perturbations_sigma: null
+apply_optimal_actuator_corrections: false
+atmosphere:
+  fried_parameter: 0.2
+  layer_type: null
+  outer_scale: 200.0
+  scintillation: false
+  slew_deg_per_sec: 1.0
+  slew_focal_plane_angle: 0.0
+  velocity: 10.0
+detector:
+  include_photon_noise: true
+  integrated_photon_flux: 100000.0
+  read_noise: 2
+dm: null
+extended_object_image: null
+filters:
+- bandwidth_samples: 7
+  central_lambda: 7.5e-07
+  focal_extent: 2.6496
+  focal_resolution: 128
+  frac_bandwidth: 0.172
+gauss_noise: null
+include_fft: false
+max_intensity_norm: true
+mirror:
+  central_obscuration_ratio: 0.25
+  layout: elf
+  num_apertures: 15
+  subaperture_radius: null
+  telescope_radius: 1.25
+num_steps: 20
+per_sample_norm: false
+power_scale: 0.05
+pupil:
+  piston_actuate_scale: 1.0e-06
+  resolution: 256
+  tip_tilt_actuate_scale: 1.0e-06
+render: false
+spiders: null
+step_dt: 0.01
