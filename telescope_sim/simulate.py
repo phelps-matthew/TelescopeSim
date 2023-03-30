@@ -13,7 +13,7 @@ import numpy as np
 import pyrallis
 from matplotlib import pyplot as plt
 from telescope_sim.multi_aperture_psf import MultiAperturePSFSampler
-from telescope_sim.sim_cfg import SimulateMultiAperatureConfig
+from telescope_sim.cfg import SimulateMultiAperatureConfig
 
 
 class SimulateMultiApertureTelescope:
